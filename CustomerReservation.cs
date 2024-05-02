@@ -3,7 +3,7 @@
 public class CustomerReservation
 {
 public Customer c {get; set;}
-    public Reservation r {get; set;}
+public Reservation r {get; set;}
 
     public CustomerReservation(Customer c, Reservation r)
     {

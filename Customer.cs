@@ -78,7 +78,6 @@ public class Customer
       int ZipCode, string UserName, string PassWord)
      {
         autoIncrement++;
-        this.CustomerID = autoIncrement;
         this.LastName = LastName;
         this.FirstName = FirstName;
         this.Birthdate = Birthdate;
@@ -91,5 +90,12 @@ public class Customer
         this.UserName = UserName;
         this.PassWord = PassWord;
      }
+     
+    
+    public Customer()
+    {
+        autoIncrement++;
+        CustomerID = autoIncrement;
+    }
 
 }
