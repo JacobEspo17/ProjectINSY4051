@@ -20,50 +20,49 @@ class Program
     {
         var c1 = new Customer
         {
-            CustomerID = 1,
-            FirstName = "Jacob",
-            LastName = "Espinosa",
-            Username = "jespo17",
-            PassWord = "9567",
-            Email = "jacobespo@outlook.com",
-            StreetAddress = "391 Holly St.Kalispell, MT 59900",
-            BirthDate = "07/25/2004"
+            firstName = "Jacob",
+            lastName = "Espinosa",
+            userName = "jespo17",
+            passWord = "9567",
+            email = "jacobespo@outlook.com",
+            streetAddress = "391 Holly St.Kalispell, MT 59900",
+            birthDate = "07/25/2004"
 
         };
 
         var c2 = new Customer
         {
-            FirstName = "Evelyn",
-            LastName = "Do",
-            Username = "Edo94",
-            Password = "5954",
-            Email = "evelyndo@outlook.com",
-            StreetAddress = "879 Sutor Ave.Unit 283 Newnan, GA 30263",
-            Birthdate = "05/09/2003"
+            firstName = "Evelyn",
+            lastName = "Do",
+            userName = "Edo94",
+            passWord = "5954",
+            email = "evelyndo@outlook.com",
+            streetAddress = "879 Sutor Ave.Unit 283 Newnan, GA 30263",
+            birthDate = "05/09/2003"
             
         };
 
         var c3 = new Customer
         {   
-            FirstName = "Nasra",
-            LastName = "Abdirahman",
-            Username = "Nabdiraham12",
-            Password = "4805",
-            Email = "nasraabdirahman@outlook.com",
-            StreetAddress = "245 Brewery St.Malden, MA 02148",
-            Birthdate = "06/25/2003"
+            firstName = "Nasra",
+            lastName = "Abdirahman",
+            userName = "Nabdiraham12",
+            passWord = "4805",
+            email = "nasraabdirahman@outlook.com",
+            streetAddress = "245 Brewery St.Malden, MA 02148",
+            birthDate = "06/25/2003"
 
         };
 
         var c4 = new Customer
         {
-            FirstName = "Ayisha",
-            LastName = "El-Refaie",
-            Username = "Aelrefaie15",
-            Password = "4895",
-            Email = "ayishaelrefaie@outlook.com",
-            StreetAddress = "702 Fairway Rd.Glastonbury, CT 06033",
-            Birthdate = "05/07/2002"
+            firstName = "Ayisha",
+            lastName = "El-Refaie",
+            userName = "Aelrefaie15",
+            passWord = "4895",
+            email = "ayishaelrefaie@outlook.com",
+            streetAddress = "702 Fairway Rd.Glastonbury, CT 06033",
+            birthDate = "05/07/2002"
         };
 
         var a1 = new Reservation();
@@ -176,10 +175,10 @@ class Program
 
         var newCustomer = new Customer
         {
-            FirstName = firstname,
-            LastName = lastname,
-            Username = username,
-            Password = password
+            firstName = firstname,
+            lastName = lastname,
+            userName= username,
+            passWord = password
         };
         customers.customerList.Add(newCustomer);
         Console.WriteLine("Profile created!, thank you for loyalty");
@@ -194,7 +193,7 @@ class Program
             return;
         }
 
-        var reservationList = customerReservations.Where(o => o.c.Username == authenticatedCustomer.Username);
+        var reservationList = customerReservations.Where(o => o.c.userName == authenticatedCustomer.userName);
 
         if(reservationList.Count() == 0)
         {
@@ -202,9 +201,9 @@ class Program
         }
         else
         {
-            foreach(var appointment in reservationList)
+            foreach(var reservation in reservationList)
             {
-                Console.WriteLine(appointment.a.dateTime);
+                Console.WriteLine("Here is your reservation");
             }
         }
         
